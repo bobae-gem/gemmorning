@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-05-04T08:30:00",
+  "channel": "dolmorning",
+  "date": "2026-05-04",
+  "agent": "searcher",
+  "run_type": "auto_loop_30min",
+  "run_sequence": 4,
+
+  "step1_search": {
+    "completed_at": "2026-05-04T08:30:00",
+    "sources_searched": [
+      "웹 검색 — 어린이날 5월 훈훈한 사연 아이 감동 실화 2026",
+      "웹 검색 — 온고지신 수불석권 견인불발 사자성어 뜻 현대 해석",
+      "웹 검색 — YouTube Shorts 올빼미 수달 아기동물 힐링 영상 2026"
+    ],
+    "candidates": [
+      {
+        "id": 1,
+        "priority": "1순위",
+        "type": "실화/사건",
+        "title": "어린이날, 경복궁·창덕궁·덕수궁 전면 무료 개방 — 나라가 아이들에게 드리는 선물",
+        "source": "대한민국 정책브리핑 / 2026 어린이날 행사 종합",
+        "url": "https://kokorang.com/2026-childrens-day-seoul-events-guide/",
+        "summary": "2026년 어린이날(5월 5일), 경복궁·창덕궁·창경궁·덕수궁 4대 궁궐과 종묘·조선왕릉이 전면 무료 개방된다. 매년 이날 하루 나라 전체가 아이들을 위해 문을 여는 것, 그 자체가 하나의 따뜻한 약속.",
+        "why_morning": "거창한 선행이 아닌 '매년 반복되는 나라의 약속'이라는 관점 — 우리가 아이들에게 물려주는 것들에 대한 아침 메시지"
+      },
+      {
+        "id": 2,
+        "priority": "2순위",
+        "type": "사자성어",
+        "title": "견인불발 (堅忍不拔)",
+        "source": "중도일보 / 나무위키 한자 사전",
+        "url": "https://wordrow.kr/%ED%95%9C%EC%9E%90/%E5%A0%85%E5%BF%8D%E4%B8%8D%E6%8B%94-%EA%B2%AC%EC%9D%B8%EB%B6%88%EB%B0%9C/",
+        "meaning": "굳게 참고 견디어 어떤 상황에서도 마음이 흔들리지 않는다",
+        "modern_interpretation": "버텨야 할 때와 쉬어야 할 때를 구분하는 것도 견인불발이에요. 억지로 버티는 게 아니라, 나를 믿고 오늘 하루를 그냥 살아내는 것. 그게 이미 충분히 대단한 거예요.",
+        "why_morning": "힘든 하루를 앞두고 있는 사람에게 '버티는 것 자체가 대단하다'는 부드러운 응원"
+      },
+      {
+        "id": 3,
+        "priority": "4순위",
+        "type": "YouTube 힐링",
+        "title": "엄마에게 버림받은 아기 고양이를 돌봐주는 형 고양이",
+        "source": "YouTube Shorts",
+        "url": "https://www.youtube.com/shorts/tIH8BbTGxwc",
+        "summary": "엄마 고양이에게 버림받은 아기 고양이 곁을 형 고양이가 지켜주는 영상. 핥아주고, 옆에 앉아주고, 밥도 양보하는 장면들이 담겨 있음.",
+        "material_point": "피 한 방울 섞이지 않아도 곁을 지켜주는 존재 — '가족은 태어나는 게 아니라 만들어지는 것'이라는 따뜻한 메시지"
+      }
+    ]
+  },
+
+  "report": {
+    "to": "총괄매니저 + 작가",
+    "status": "서치 완료 ✅",
+    "prev_runs": [
+      "search_20260504_0700.json",
+      "search_20260504_0730.json",
+      "search_20260504_0800.json"
+    ],
+    "note": "자동화 루프 4회차. 어린이날(5월 5일) 시즌 소재 포함."
+  }
+}

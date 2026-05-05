@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": ["WebSearch", "WebFetch", "Write", "Read", "Edit", "Bash", "Glob", "Grep"],
+    "skipDangerousModePermissionPrompt": true
+  }
+}
