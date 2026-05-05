@@ -2014,6 +2014,64 @@
       .charts-week-month { grid-template-columns:1fr !important; }
     }
 
+    /* ── 모바일 대응 ── */
+    @media (max-width: 768px) {
+      /* 사이드바 숨기고 하단 네비로 대체 */
+      .sidebar { display: none; }
+
+      /* 메인 콘텐츠 전체 너비 */
+      .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding-bottom: 80px;
+      }
+
+      /* 페이지 패딩 축소 */
+      .main-content > div > div,
+      [id^="page-"] > div {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 16px !important;
+      }
+
+      /* 하단 네비바 */
+      .mobile-nav {
+        display: flex !important;
+      }
+    }
+
+    /* 하단 네비바 (모바일 전용) */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 64px;
+      background: var(--card-bg);
+      border-top: 1px solid var(--card-border);
+      z-index: 200;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 8px;
+    }
+    .mobile-nav-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 6px 10px;
+      border: none;
+      background: none;
+      color: var(--text-secondary);
+      font-size: 10px;
+      font-family: inherit;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: color 0.15s;
+      flex: 1;
+    }
+    .mobile-nav-btn .mn-icon { font-size: 20px; line-height: 1; }
+    .mobile-nav-btn.active { color: var(--sunrise-orange); }
+
     /* ── 차트 카드 ── */
     .chart-card { background:var(--card-bg); border:1px solid var(--card-border);
                   border-radius:16px; padding:20px 22px; margin-bottom:20px; }
@@ -2086,6 +2144,25 @@
 </aside>
 
 <!-- ── 메인 콘텐츠 ── -->
+<!-- 모바일 하단 네비바 -->
+<nav class="mobile-nav">
+  <button class="mobile-nav-btn active" id="mnav-overview" onclick="showPage('overview')">
+    <span class="mn-icon">🌅</span>현황
+  </button>
+  <button class="mobile-nav-btn" id="mnav-search" onclick="showPage('search')">
+    <span class="mn-icon">🔍</span>서치
+  </button>
+  <button class="mobile-nav-btn" id="mnav-starred" onclick="showPage('starred')">
+    <span class="mn-icon">⭐</span>보관함
+  </button>
+  <button class="mobile-nav-btn" id="mnav-content" onclick="showPage('content')">
+    <span class="mn-icon">✏️</span>컨텐츠
+  </button>
+  <button class="mobile-nav-btn" id="mnav-sns" onclick="showPage('sns')">
+    <span class="mn-icon">📱</span>SNS
+  </button>
+</nav>
+
 <div class="main-content">
 
 <!-- ── 헤더 ── -->
@@ -5663,6 +5740,11 @@ function loadSearchResults() {
     const nav    = document.getElementById('nav-' + page);
     if (target) target.style.display = 'block';
     if (nav)    nav.classList.add('active');
+
+    // 모바일 하단 네비바 active 동기화
+    document.querySelectorAll('.mobile-nav-btn').forEach(b => b.classList.remove('active'));
+    const mNav = document.getElementById('mnav-' + page);
+    if (mNav) mNav.classList.add('active');
 
     if (page === 'report')  { loadReportPage(); }
     if (page === 'content') { fetchAndLoadDrafts(); renderSelectedDrafts(); }
