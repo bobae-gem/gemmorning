@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-05-07T08:47:00",
-  "total_materials": 333,
-  "latest_sequence": 111,
+  "updated_at": "2026-05-07T09:16:10",
+  "total_materials": 336,
+  "latest_sequence": 112,
   "files": [
+    "output/search_20260507_1430.json",
     "output/search_20260507_1400.json",
     "output/search_20260507_1330.json",
     "output/search_20260507_1300.json",
